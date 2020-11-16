@@ -1,0 +1,37 @@
+{
+    "pathwayId": "_smoketests",
+    "id": "uilayout-editor-terminal",
+    "noindex": true,
+    "title": "Scenario with Editor UI",
+    "description": "Katacoda Scenario Example",
+    "details": {
+        "steps": [
+            {
+                "title": "Hello World",
+                "text": "step1.md"
+            }
+        ]
+    },
+    "files": [
+        "app.js", "index.js"
+    ],
+    "environment": {
+        "hideintro": true,
+        "hidefinish": true,
+        "uilayout": "editor-terminal-v1",
+        "uisettings": "javascript",
+        "uieditorpath": "/test/",
+        "uidependencies": [
+            "/socket.io/socket.io.js",
+            "/javascripts/term.js",
+            "/js/vendor/ace/ace.js",
+            "/js/editor.js",
+            "/javascripts/terminal-application.js",
+            "/javascripts/editor-terminal-application.js",
+            "/javascripts/sync-editor-to-container.js"
+        ]
+    },
+    "backend": {
+        "dockerimage": "ubuntu"
+    }
+}
