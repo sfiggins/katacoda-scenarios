@@ -5,10 +5,18 @@
     "title": "Scenario with Editor UI",
     "description": "Katacoda Scenario Example",
     "details": {
+        "intro": {
+            "title": "Editor Terminal Tests",
+            "text": "intro.md",
+            "background": "introBackground.sh",
+            "foreground": "introForeground.sh"
+        },
         "steps": [
             {
                 "title": "Hello World",
-                "text": "step1.md"
+                "text": "step1.md",
+                "background": "step1Background.sh",
+                "foreground": "step1Foreground.sh"
             }
         ]
     },
@@ -16,7 +24,7 @@
         "app.js", "index.js"
     ],
     "environment": {
-        "hideintro": true,
+        "hideintro": false,
         "hidefinish": true,
         "uilayout": "editor-terminal-v1",
         "uisettings": "javascript",
