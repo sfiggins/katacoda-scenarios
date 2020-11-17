@@ -6,10 +6,10 @@
     "description": "Katacoda Scenario Example",
     "details": {
         "intro": {
-            "title": "Editor Terminal Tests",
             "text": "intro.md",
             "background": "introBackground.sh",
-            "foreground": "introForeground.sh"
+            "foreground": "introForeground.sh",
+            "credits": ""
         },
         "steps": [
             {
