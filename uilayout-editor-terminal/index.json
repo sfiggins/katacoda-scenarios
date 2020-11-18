@@ -18,7 +18,7 @@
         ]
     },
     "files": [
-        "app.js", "index.js"
+        "background.log", "app.js", "index.js"
     ],
     "environment": {
         "hideintro": true,
