@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "The step1 background script has been executed."
+cat >> /tmp/background.log <<EOF
+$(/bin/date -Iseconds) - Executed step1 background script.
+EOF
