@@ -60,24 +60,47 @@ Test multiple dots:
 `test.html.etb`{{open}}
 
 
-## Open Root Files
+## Open File paths
 
 Known issue:
 
-Files outside of the user root directory can't be opened. This is never going to be supported. Workarounds are use VS Code or symlink the file to the path.
+Editor paths are relative to "uieditorpath". Files do not open as expected when
+given a full path. This is because paths for the editor are always appended to
+the "uieditorpath." The default value for uieditor path is in most cases `root`.
+For this scenario, "uieditorpath" has been set to `/test/`.
+
+Workarounds for opening files outside of "uiedtorpath" are to use relative
+pathing, symlink the file to the path, or use VS Code layouts which do not share
+this limitation.
+
+### Files with full path
 
 `echo '/etc' > /etc/test`{{execute}}
 
+This will not work:
+
 `/etc/test`{{open}}
+
+### Files with relative path
+
+This will open the file under /etc, but the file will not show up in the file
+tree to the left of the editor.
+
+`../etc/test`{{open}}
+
+### Files in /root
 
 `echo 'myfilein' > /root/myfileinroot`{{execute}}
 
-`/root/myfileinroot`{{open}}
-
-Full paths also appear to fail, even if they are in the same directory as the editor. This should work.
-
-`/test/myfileinroot`{{open}}
-
-In would be the same as doing: 
+Root is the default in most cases for "uieditorpath". This would work had we not
+set the "uieditorpath" to `/test/`
 
 `myfileinroot`{{open}}
+
+### Files in uieditor path
+
+`echo 'myfilein' > /test/myfileintest`{{execute}}
+
+Paths that can be found relative to the "uieditorpath" will work as expected:
+
+`myfileintest`{{open}}
