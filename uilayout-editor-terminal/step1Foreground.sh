@@ -1,1 +1,1 @@
-echo "The step1 foreground script has been executed."
+echo "$(date -Iseconds) - Executed step1 foreground script."

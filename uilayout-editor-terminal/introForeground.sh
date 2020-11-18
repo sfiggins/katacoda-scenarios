@@ -1,1 +1,1 @@
-echo "The intro foreground script has been executed."
+echo "$(date -Iseconds) - Executed intro foreground script."
