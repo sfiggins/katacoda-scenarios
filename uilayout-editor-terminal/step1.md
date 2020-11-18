@@ -45,22 +45,21 @@ The following snippet will append the contents of the editor:
 </pre>
 </pre>
 
-## New Files
+## New Files for Editor
 
-Create a new file via the CLI:
-`touch newFile.js`{{execute}}
+Create a new file in uieditorpath via the CLI:
+`touch /test/newFile.js`{{execute}}
 
 This can then be opened:
 `newFile.js`{{open}}
 
 Test multiple dots:
 
-`touch test.html.etb`{{execute}}
+`touch /test/test.html.etb`{{execute}}
 
 `test.html.etb`{{open}}
 
-
-## Open File paths
+## Open in Editor File Paths
 
 Known issue:
 
