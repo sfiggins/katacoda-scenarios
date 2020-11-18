@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /root/test
-cat >> /root/test/background.log <<EOF
+mkdir -p /test
+cat >> /test/background.log <<EOF
 $(/bin/date -Iseconds) - Executed step1 background script.
 EOF
