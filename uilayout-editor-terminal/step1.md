@@ -103,3 +103,25 @@ set the "uieditorpath" to `/test/`
 Paths that can be found relative to the "uieditorpath" will work as expected:
 
 `myfileintest`{{open}}
+
+### Files that don't exist
+
+You can open a file that does not exist. Any directories in its path must exist and be
+given relative to the uieditorpath.
+
+### Under the uieditorpath
+
+`touchless`{{open}}
+
+### Outside uieditorpath
+
+You can create files outside the uieditorpath this way, but they will not show
+up in the editor's directory tree.
+
+`../etc/etctouchless`{{open}}
+
+### Non-existent Path
+
+This should not work:
+
+`../tmp/nonexistentdirectory/notouchless`{{open}}
