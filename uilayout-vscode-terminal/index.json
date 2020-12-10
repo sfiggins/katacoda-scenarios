@@ -23,6 +23,7 @@
     "environment": {
         "hideintro": true,
         "hidefinish": true,
+        "showide": true,
         "uilayout": "vscode-terminal-split",
         "uisettings": "javascript",
         "uieditorpath": "/test/"
