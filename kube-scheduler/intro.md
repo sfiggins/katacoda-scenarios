@@ -1,0 +1,3 @@
+The kube-scheduler is the component inside Kubernetes in charge of making sure your workloads are spread in the most efficient way across your Kubernetes cluster. However by default Kubernetes does not know much about your application, so you are responsible to provide information about your application to Kubernetes so the kube-scheduler can make informed decisions.
+
+This time we will put our troubleshooting hats on to figure what is wrong in our cluster.
