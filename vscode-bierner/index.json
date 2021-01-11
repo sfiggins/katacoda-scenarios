@@ -1,6 +1,6 @@
 {
   "title": "Visual Studio Code tips and Tricks",
-  "description": "Tips form Matt Bierner's confernece video",
+  "description": "Tips from Matt Bierner's conference video",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
@@ -33,7 +33,10 @@
       "text": "finish.md"
     }
   },
-  "environment": {},
+  "environment": {
+    "uilayout": "terminal",
+    "showide": true
+  },
   "backend": {
     "imageid": "ubuntu:2004"
   }
