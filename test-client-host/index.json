@@ -51,6 +51,6 @@
     "dashboards": [{"name": "presto-ui", "port": 8080}, {"name": "minio-ui", "port": 9000}]
   },
   "backend": {
-    "imageid": "sysdig"
+    "imageid": "dind"
   }
 }
