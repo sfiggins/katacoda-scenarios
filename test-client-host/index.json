@@ -1,0 +1,56 @@
+{
+  "title": "Test Client Host",
+  "private": true,
+  "description": "Getting this client - host01 thing to work",
+  "difficulty": "Stupid Simple",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "run_server.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ],
+      "host01": [
+        {
+          "file": "run_server.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "index.html",
+          "target": "~/"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "hideHiddenFiles": true,
+    "showdashboard": false,
+    "dashboards": [{"name": "presto-ui", "port": 8080}, {"name": "minio-ui", "port": 9000}]
+  },
+  "backend": {
+    "imageid": "sysdig"
+  }
+}
