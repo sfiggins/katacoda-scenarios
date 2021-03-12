@@ -20,13 +20,6 @@
       "text": "finish.md"
     },
     "assets": {
-      "client": [
-        {
-          "file": "run_server.sh",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
-      ],
       "host01": [
         {
           "file": "run_server.sh",
