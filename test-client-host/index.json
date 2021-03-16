@@ -20,15 +20,17 @@
       "text": "finish.md"
     },
     "assets": {
+      "client": [
+        {
+          "file": "index.html",
+          "target": "~/"
+        }
+      ],
       "host01": [
         {
           "file": "run_server.sh",
           "target": "/usr/local/bin/",
           "chmod": "+x"
-        },
-        {
-          "file": "index.html",
-          "target": "~/"
         },
         {
           "file": "docker-compose.yml",
