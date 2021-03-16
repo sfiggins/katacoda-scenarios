@@ -1,6 +1,5 @@
 {
   "title": "Test Client Host",
-  "private": true,
   "description": "Getting this client - host01 thing to work",
   "difficulty": "Stupid Simple",
   "time": "15 minutes",
