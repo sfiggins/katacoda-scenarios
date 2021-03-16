@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-echo "intro background executed by $(whoami) on $(hostname)" > /tmp/background.out
+ssh root@host01 "until [ -f /usr/local/bin/run_server.sh ]; do sleep 1; done; /usr/local/bin/run_server.sh"

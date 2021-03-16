@@ -1,3 +1,4 @@
 #!/bin/bash
 
-python -m SimpleHTTPServer 8080
+docker pull nginx
+docker run --name docker-nginx -p 8080:80 nginx
