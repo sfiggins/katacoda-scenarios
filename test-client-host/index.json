@@ -22,7 +22,7 @@
       "client": [
         {
           "file": "index.html",
-          "target": "~/"
+          "target": "/root"
         }
       ],
       "host01": [
@@ -33,7 +33,7 @@
         },
         {
           "file": "docker-compose.yml",
-          "target": "~/"
+          "target": "/root"
         }
       ]
     }
