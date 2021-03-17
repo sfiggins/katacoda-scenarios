@@ -5,4 +5,4 @@ until [ -x /root/docker-compose.yml ]
  do sleep 1
 done
 
-ssh root@host01 /usr/local/bin/docker-compose -d < /root/docker-compose.yml
+ssh root@host01 /usr/local/bin/docker-compose -d < /root/docker-compose.yml > /tmp/ssh-dc.log
