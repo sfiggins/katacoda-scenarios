@@ -29,6 +29,6 @@
         "uieditorpath": "/test/"
     },
     "backend": {
-        "imageid": "python:3.8"
+        "imageid": "bash"
     }
 }
