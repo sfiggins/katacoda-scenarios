@@ -38,6 +38,6 @@
     "showide": true
   },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "bash"
   }
 }
