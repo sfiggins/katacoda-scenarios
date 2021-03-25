@@ -29,6 +29,6 @@
         "uieditorpath": "/test/"
     },
     "backend": {
-        "imageid": "ubuntu"
+        "imageid": "bash"
     }
 }
