@@ -1,0 +1,58 @@
+{
+  "title": "Conditional GAN on TensorFlow",
+  "description": "Learn how to conditional GAN for generative modeling.",
+  "difficulty": "Intermediate",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "The Conditional GAN",
+        "text": "step1_cgan.md"
+      },
+      {
+        "title": "Prepare and Load Data",
+        "text": "step2_loaddata.md"
+      },
+      {
+        "title": "Building the Generator",
+        "text": "step3_generator.md"
+      },
+      {
+        "title": "Building the Discriminator and GAN",
+        "text": "step4_discriminator.md"
+      },
+      {
+        "title": "Training the CGAN",
+        "text": "step5_cgan_train.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "install_tensorflow.sh",
+      "foreground": "run-python3.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "cgan.png",
+          "target": "/root"
+        },
+        {
+          "file": "fashion_mnist.png",
+          "target": "/root"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uieditorpath": "/root/contents",
+    "showide": true,
+    "uilayout": "terminal",
+  },
+  "backend": {
+    "imageid": "python:3.8",
+  }
+}
