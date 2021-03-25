@@ -7,7 +7,7 @@
     "steps": [
       {
         "title": "The Conditional GAN",
-        "text": "step1_cgan.md"
+        "text": "step1_cgan.md"        
       },
       {
         "title": "Prepare and Load Data",
@@ -28,31 +28,26 @@
     ],
     "intro": {
       "text": "intro.md",
-      "background": "install_tensorflow.sh",
-      "foreground": "run-python3.sh"
+      "courseData" : "install_tensorflow.sh",
+      "code": "run-python3.sh"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
-        {
-          "file": "cgan.png",
-          "target": "/root"
-        },
-        {
-          "file": "fashion_mnist.png",
-          "target": "/root"
-        }
-      ]
+      "host01": [         
+        {"file": "cgan.png", "target": "/root"},
+        {"file": "fashion_mnist.png", "target": "/root"}        
+       ]
     }
   },
   "environment": {
     "uieditorpath": "/root/contents",
     "showide": true,
-    "uilayout": "terminal",
-  },
-  "backend": {
-    "imageid": "python:3.8",
+    "idePort": 23000,
+    "uilayout": "terminal"
+},
+"backend": {
+    "imageid": "python:3.8"
   }
 }

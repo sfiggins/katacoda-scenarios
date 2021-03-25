@@ -1,3 +1,5 @@
+#/bin/bash
+
 pip install matplotlib
 pip install --upgrade pip 
 pip install tensorflow==2.2 
