@@ -48,6 +48,6 @@
     "uilayout": "terminal"
 },
 "backend": {
-    "imageid": "ubuntu-8gb"
+    "imageid": "python:3.8"
   }
 }
