@@ -14,8 +14,8 @@ from tqdm import tqdm
 
 import tensorflow as tf
 
-tf.config.threading.set_intra_op_parallelism_threads(3)
-tf.config.threading.set_inter_op_parallelism_threads(3)
+tf.config.threading.set_intra_op_parallelism_threads(4)
+tf.config.threading.set_inter_op_parallelism_threads(4)
 ```{{execute}}
 
 This scenario uses the Functional API for constructing a network. In previous scenarios we used the Sequential API. The difference allows us to combine or concatenate the labels to the images we will train on.
