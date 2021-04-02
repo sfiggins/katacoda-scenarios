@@ -1,4 +1,5 @@
 {
+  "type": "challenge@0.5",
   "title": "Visual Studio Code tips and Tricks",
   "description": "Tips from Matt Bierner's conference video",
   "difficulty": "Intermediate",
