@@ -1,0 +1,56 @@
+{
+  "type": "challenge@0.6",
+  "title": "Python First Steps, challenge 1",
+  "description": "Week 1 challenge.",
+  "difficulty": "Beginner",
+  "time": "5 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "code": "run-python3.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "challenge.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "hidesidebar": true,
+    "uilayout": "terminal-v1",
+    "uidependencies": [
+      "/socket.io/socket.io.js",
+      "/javascripts/term.js",
+      "/javascripts/terminal-application.js"
+    ]
+  },
+  "backend": {
+    "imageid": "python:3.8",
+    "dockerimage": "python:3.8",
+    "backendTarget": "client"
+  },
+  "gitBased": true,
+  "id": "fspy1",
+  "pathwayTitle": "orm-reuven-lerner",
+  "pathwayId": "orm-reuven-lerner",
+  "error": [
+    {
+      "id": "invalid-challenge-script",
+      "message": "The challenge.sh is invalid. null. Please contact author support. "
+    }
+  ],
+  "live": true,
+  "noindex": true,
+  "authenticated": false,
+  "katacoda": {
+    "featureFlags": {
+      "scripts": "v2"
+    }
+  },
+  "lastUpdated": "2021-04-02T22:14:32.886Z",
+  "gitCommit": "fd1ac6ec0d563813654b7eb472785edcc34d6f9c"
+}
