@@ -1,8 +1,11 @@
-The CGAN model is build we can move on to training with:
+The CGAN model is built we can move on to training with:
+
 ```python
 batch_size = 128
 epochs = 10
-bat_per_epo = int(dataset[0].shape[0] / batch_size)
+# bat_per_epo = int(dataset[0].shape[0] / batch_size)
+# For brevity we will only train a partial batch
+bat_per_epo = 1280
 half_batch = int(batch_size / 2)
 for i in range(epochs):
   for j in tqdm(range(bat_per_epo)):
@@ -17,6 +20,7 @@ for i in range(epochs):
 ```{{execute windows}}
 
 Training for the CGAN may take some time so please be patient. After the training is complete we can generate an output plot with classes like so:
+
 ```python
 def generated_plot(examples, n):
   plt.figure(figsize=(10,10))
