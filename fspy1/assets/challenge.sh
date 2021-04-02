@@ -2,7 +2,8 @@
 
 function kc_start_tasks()
 {
-  kc_instructions "Example Challenge - Follow the tasks"
+  kc_instructions \
+      "Example Challenge - Follow the tasks\n"
 
   kc_task \
       "Task 1: Create a file called /root/challengefile" \
@@ -12,6 +13,3 @@ function kc_start_tasks()
 
   echo "You successfully completed it"
 }
-
-
-start_challenge()
