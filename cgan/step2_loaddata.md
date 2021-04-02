@@ -11,6 +11,11 @@ from tensorflow.keras.layers import Input, Dense, Reshape, Flatten, Conv2D, Conv
 from tensorflow.keras.layers import LeakyReLU, Dropout, MaxPooling2D, Embedding, Concatenate
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+
+import tensorflow as tf
+
+tf.config.threading.set_intra_op_parallelism_threads(2)
+tf.config.threading.set_inter_op_parallelism_threads(2)
 ```{{execute}}
 
 This scenario uses the Functional API for constructing a network. In previous scenarios we used the Sequential API. The difference allows us to combine or concatenate the labels to the images we will train on.
