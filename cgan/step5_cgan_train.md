@@ -4,8 +4,10 @@ The CGAN model is built we can move on to training with:
 batch_size = 128
 epochs = 10
 # bat_per_epo = int(dataset[0].shape[0] / batch_size)
-# For brevity we will only train a partial batch
-bat_per_epo = 1280
+# With the limited resources of this session, a fuller
+# training would take hours.
+# For brevity we will only train 10 batches per epoch.
+bat_per_epo = 10
 half_batch = int(batch_size / 2)
 for i in range(epochs):
   for j in tqdm(range(bat_per_epo)):
