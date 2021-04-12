@@ -24,6 +24,12 @@ We will encapsulate the data loading into a function like so:
 ```python
 def load_real_samples():
 	(x_train, y_train), (_, _) = load_data()
+
+	# limit dataset size to speed example
+	limit=5000
+	x_train = x_train[:limit]
+	y_train = y_train[:limit]
+
 	X = np.expand_dims(x_train, axis=-1)
 	X = X.astype('float32')
 	X = (X - 127.5) / 127.5
@@ -81,11 +87,3 @@ We will now use the IDE tab and VS Code to view the output image `generated_plot
 Click on the IDE tab and then click on the file `generated_plot.png` in the file folder sidebar.
 
 You can refer back to the IDE at any time to recall what the images looked like.
-
-
-
-
-
-
-
-
