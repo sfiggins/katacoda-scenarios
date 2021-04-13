@@ -28,7 +28,7 @@ We will encapsulate the data loading into a function like so:
 def load_real_samples():
     (x_train, y_train), (_, _) = load_data()
     # limit dataset size to speed example
-    limit=1280
+    limit=12800
     x_train = x_train[:limit]
     y_train = y_train[:limit]
     X = np.expand_dims(x_train, axis=-1)

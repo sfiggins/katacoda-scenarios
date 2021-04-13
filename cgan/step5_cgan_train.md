@@ -2,7 +2,7 @@ The CGAN model is built we can move on to training with:
 
 ```python
 batch_size = 128
-epochs = 10
+epochs = 1
 bat_per_epo = int(dataset[0].shape[0] / batch_size)
 half_batch = int(batch_size / 2)
 for i in range(epochs):
