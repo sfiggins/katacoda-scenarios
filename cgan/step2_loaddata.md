@@ -20,28 +20,29 @@ tf.config.threading.set_inter_op_parallelism_threads(4)
 
 This scenario uses the Functional API for constructing a network. In previous scenarios we used the Sequential API. The difference allows us to combine or concatenate the labels to the images we will train on.
 
+This learning environment has a cpu quota so we limit the parallelism of the threads so TensorFlow can make better decisions about how to spread the load.
+
 We will encapsulate the data loading into a function like so:
+
 ```python
 def load_real_samples():
-	(x_train, y_train), (_, _) = load_data()
-
-	# limit dataset size to speed example
-	limit=5000
-	x_train = x_train[:limit]
-	y_train = y_train[:limit]
-
-	X = np.expand_dims(x_train, axis=-1)
-	X = X.astype('float32')
-	X = (X - 127.5) / 127.5
-	return [X, y_train]
+    (x_train, y_train), (_, _) = load_data()
+    # limit dataset size to speed example
+    limit=1280
+    x_train = x_train[:limit]
+    y_train = y_train[:limit]
+    X = np.expand_dims(x_train, axis=-1)
+    X = X.astype('float32')
+    X = (X - 127.5) / 127.5
+    return [X, y_train]
 
 ```{{execute windows}}
 
-The Fashion MNIST is a dataset of 28x28 images as shown in the figure below. 
+The Fashion MNIST is a dataset of 60,000 28x28 images as shown in the figure below. 
 
 ![MNIST Fashion](assets/fashion_mnist.png?raw=true)
 
-In this scenario we load both the images and training labels. As well we normalize as well as shift the data around 0, [-1:+1], by using the X- 127.5 / 127.5. Network training will often work better if data is normalized and shifted to around 0.
+In this scenario we load both the images and training labels. As well we normalize as well as shift the data around 0, [-1:+1], by using the X- 127.5 / 127.5. Network training will often work better if data is normalized and shifted to around 0. We limit the size of the data to reduce the amount of training we will do later in this scenario.
 
 We can load the data with: 
 ```python
