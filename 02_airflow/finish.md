@@ -1,0 +1,1 @@
+In this scenario, you learned how to install Airflow, create a new Airflow project, and create a simple DAG file containing several different types of tasks. You also learned how to trigger a DAG run from the command line and the Airflow web UI, and inspect task run logs in the UI.
