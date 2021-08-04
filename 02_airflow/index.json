@@ -37,7 +37,8 @@
     },
     "environment": {
         "showide": true,
-        "uilayout": "terminal-iframe"
+        "uilayout": "terminal-iframe",
+        "showdashboard": false
     },
     "backend": {
         "imageid": "ubuntu:2004"

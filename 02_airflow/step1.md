@@ -38,7 +38,7 @@ To confirm that the configuration works correctly, you can run the Airflow webse
 
 `airflow scheduler`{{execute}}
 
-This runs the Airflow web UI at port `8080`. In order to access the web UI, open the [Airflow web UI](http://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com){:target="_blank"} in a new tab or window. You may need to wait while the webserver is starting up.
+This runs the Airflow web UI at port `8080`. In order to access the web UI, open the [Airflow web UI](http://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com). This will open in a new tab or window. Return to this page for further instruction when it finishes loading.
 
 Once loaded, you will see the Airflow web UI login page. Enter the user credentials you just created:
 * Username: admin
