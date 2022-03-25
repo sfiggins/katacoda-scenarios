@@ -1,6 +1,3 @@
-#!/bin/bash
-set -v
-
 while true; do 
   if ! grep "DoneDone" /opt/katacoda-finished &> /dev/null
   then
@@ -17,8 +14,9 @@ do
   sleep 1
 done
 echo 'file exists; running sed'
-sed -i 's/clientCAFile: \/etc\/kubernetes\/pki\/ca.crt/clientCAFile: \/etc\/kubernetes\/pki\/non-existent-ca.crt/g' /var/lib/kubelet/config.yaml
+sed -i 's#clientCAFile: /etc/kubernetes/pki/ca.crt#clientCAFile: /etc/kubernetes/pki/non-existent-ca.crt#g' /var/lib/kubelet/config.yaml
 echo 'reloading daemon and restarting kubelet'
 systemctl daemon-reload
 systemctl restart kubelet
+echo 'done'
 EOF
