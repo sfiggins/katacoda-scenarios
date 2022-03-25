@@ -1,0 +1,39 @@
+{
+    "difficulty": "Intermediate",
+    "title": "Troubleshooting a Worker Node",
+    "time": "10 minutes", 
+    "private": true,
+    "details": {
+        "steps": [
+            {
+                "title": "Identifying and fixing the issue",
+                "text": "step1.md",
+                "answer": "step1-answer.md",
+                "verify": "step1-verify.sh"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "foreground": "foreground.sh",
+            "background": "background.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "client": [
+                {
+                    "file": "*",
+                    "target": "/root"
+                }
+            ]
+        }
+    },
+    "environment": {
+        "hideHiddenFiles": true,
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "kubernetes-cluster-running:1.23"
+    }
+}

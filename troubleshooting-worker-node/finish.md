@@ -1,0 +1,1 @@
+Continue practicing for the [CKA exam](https://www.cncf.io/certification/cka/) with the *[Certified Kubernetes Administator (CKA) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-administrator/9781098107215/)*.
