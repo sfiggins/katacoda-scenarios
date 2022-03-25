@@ -1,4 +1,5 @@
 #!/bin/bash
+set -v
 
 while true; do 
   grep "DoneDone" /opt/katacoda-finished &> /dev/null
