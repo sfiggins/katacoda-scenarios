@@ -1,3 +1,5 @@
+backgroundLog=">> /opt/katacoda-background.log"
+
 while true; do 
   if ! grep "DoneDone" /opt/katacoda-finished &> /dev/null
   then
@@ -7,7 +9,21 @@ while true; do
   fi
 done
 
-ssh node01 << EOF >> /opt/katacoda-background.log 2>&1
+echo "waiting for node01 to register" >> "${backgroundLog}"
+
+# Add a big sleep so the node can get registered.
+while true; do
+  if ! /usr/bin/kubectl get nodes | grep "node01" &> /dev/null
+  then
+    sleep 1
+  else
+    break
+  fi
+done
+
+echo "breaking kubelet config.yaml" >> "${backgroundLog}"
+
+ssh node01 << EOF >> "${backgroundLog}" 2>&1
 echo 'wait for file'
 until [ -f /var/lib/kubelet/config.yaml ]
 do
@@ -18,5 +34,6 @@ sed -i 's#clientCAFile: /etc/kubernetes/pki/ca.crt#clientCAFile: /etc/kubernetes
 echo 'reloading daemon and restarting kubelet'
 systemctl daemon-reload
 systemctl restart kubelet
-echo 'done'
 EOF
+
+echo "done" >> "${backgroundLog}"
