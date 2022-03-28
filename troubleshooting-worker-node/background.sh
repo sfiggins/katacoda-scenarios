@@ -11,9 +11,8 @@ done
 
 echo "waiting for node01 to register" >> "${backgroundLog}"
 
-# Add a big sleep so the node can get registered.
 while true; do
-  if ! /usr/bin/kubectl get nodes | grep "node01" &> /dev/null
+  if ! /usr/bin/kubectl get nodes | grep "node01         Ready" &> /dev/null
   then
     sleep 1
   else
