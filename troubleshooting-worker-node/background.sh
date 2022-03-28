@@ -1,4 +1,4 @@
-backgroundLog=">> /opt/katacoda-background.log"
+backgroundLog="/opt/katacoda-background.log"
 
 while true; do 
   if ! grep "DoneDone" /opt/katacoda-finished &> /dev/null
