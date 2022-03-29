@@ -1,3 +1,5 @@
+#!/bin/bash
+
 backgroundLog="/opt/katacoda-background.log"
 
 while true; do 
