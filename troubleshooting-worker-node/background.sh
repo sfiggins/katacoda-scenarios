@@ -24,8 +24,7 @@ done
 
 echo "breaking kubelet config.yaml" >> "${backgroundLog}"
 
-ssh node01 << EOF >> "${backgroundLog}" 2>&1
-echo 'wait for file'
+ssh node01 "echo 'wait for file'
 until [ -f /var/lib/kubelet/config.yaml ]
 do
   sleep 1
@@ -34,7 +33,6 @@ echo 'file exists; running sed'
 sed -i 's#clientCAFile: /etc/kubernetes/pki/ca.crt#clientCAFile: /etc/kubernetes/pki/non-existent-ca.crt#g' /var/lib/kubelet/config.yaml
 echo 'reloading daemon and restarting kubelet'
 systemctl daemon-reload
-systemctl restart kubelet
-EOF
+systemctl restart kubelet" >> "${backgroundLog}" 2>&1
 
 echo "done" >> "${backgroundLog}"
